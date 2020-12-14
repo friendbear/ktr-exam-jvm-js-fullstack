@@ -45,10 +45,13 @@ fun main() {
         }
     }.start(wait = true)
 
-    println("Hello, JVM!")
 }
 val shoppingList = mutableListOf(
     ShoppingListItem("Cucumbers 🥒", 1),
     ShoppingListItem("Tomatoes 🍅", 2),
     ShoppingListItem("Orange Juice 🍊", 3)
 )
+
+fun configure(configure: ShoppingListItem.() -> Unit = {}) {
+    configure.apply {  }
+}
